@@ -6,7 +6,7 @@ block_cipher = None
 added_files = [
          ('resources\\*.ico', 'resources'),
          ('resources\\images\\*.png', 'resources\\images'),
-         ('resources\\audios\\*.mp3', 'resources\\audios'),
+         ('resources\\musics\\*.ogg', 'resources\\musics'),
          ('resources\\audios\\*.ogg', 'resources\\audios'),
          ]
 
