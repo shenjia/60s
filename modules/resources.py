@@ -23,4 +23,4 @@ def loadMusic(dir, file, name):
 def loadAll():
     walk(abspath('resources', 'images'), loadImage, c.IMAGE_EXTS)
     walk(abspath('resources', 'audios'), loadAudio, c.AUDIO_EXTS)
-    walk(abspath('resources', 'audios'), loadMusic, c.MUSIC_EXTS)
+    walk(abspath('resources', 'musics'), loadMusic, c.MUSIC_EXTS)

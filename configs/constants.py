@@ -46,4 +46,4 @@ EVENT_MAKE_BULLET = pygame.USEREVENT + 2
 # 资源类型
 IMAGE_EXTS = ('.png', '.jpg', 'bmp')
 AUDIO_EXTS = ('.wav', '.ogg', '.mdi')
-MUSIC_EXTS = ('.mp3')
+MUSIC_EXTS = ('.ogg')
