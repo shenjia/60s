@@ -1,1 +1,1 @@
-pyinstaller -F build.spec.windows
+pyinstaller -F build.spec

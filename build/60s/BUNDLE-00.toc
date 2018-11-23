@@ -1,3 +1,0 @@
-([('60s',
-   '/Users/zhangshenjia/Cloud/works/github/60s/dist/60s',
-   'EXECUTABLE')],)
