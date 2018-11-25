@@ -11,7 +11,7 @@ added_files = [
          ]
 
 a = Analysis(['60s.py'],
-             pathex=['D:\\60s'],
+             pathex=[''],
              binaries=[],
              datas=added_files,
              hiddenimports=[],
