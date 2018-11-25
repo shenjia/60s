@@ -91,7 +91,7 @@ class Game():
         # 播放音乐
         if self.isMusic:
             pygame.mixer.music.set_volume(c.MUSIC_VOLUME)
-            pygame.mixer.music.play()
+            pygame.mixer.music.play(loops=1)
 
         # 初始化飞船
         self.ship = Ship()
@@ -147,7 +147,7 @@ class Game():
                 pygame.mixer.music.stop()
                 self.isMusic = False
             else:
-                pygame.mixer.music.play()
+                pygame.mixer.music.play(loops=1)
                 self.isMusic = True
 
     # 处理松开键
@@ -204,7 +204,7 @@ class Game():
     # 显示文本提示
     def showMessage(self, message, color = c.MESSAGE_COLOR, seconds = c.MESSAGE_SECONDS):
 
-        font = pygame.font.SysFont(c.MESSAGE_FONT,c.MESSAGE_SIZE)
+        font = pygame.font.Font(c.MESSAGE_FONT,c.MESSAGE_SIZE)
         text = font.render(message, True, color)
         position = text.get_rect()
         position.center = c.SCREEN_CENTER

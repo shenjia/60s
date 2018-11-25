@@ -36,7 +36,7 @@ class Timer:
     def draw(self):
         if not self.isHide:
             timer = self.getText()
-            font = pygame.font.SysFont(c.TIMER_FONT,c.TIMER_SIZE)
+            font = pygame.font.Font(c.TIMER_FONT,c.TIMER_SIZE)
             text = font.render(timer, True, c.TIMER_COLOR)
             position = text.get_rect()
             position.center = ((c.SCREEN_WIDTH/2), c.TIMER_SIZE)
