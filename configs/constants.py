@@ -14,20 +14,20 @@ SCREEN_HEIGHT = 480
 SCREEN_CENTER = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 # 信息提示
-MESSAGE_FONT = "arialblack"
+MESSAGE_FONT = "resources/fonts/Consolas Bold.ttf"
 MESSAGE_COLOR = RED
 MESSAGE_SIZE = 50
 MESSAGE_SECONDS = 5
 
 # 计时器
-TIMER_FONT = "arialblack"
+TIMER_FONT = "resources/fonts/Consolas Bold.ttf"
 TIMER_COLOR = WHITE
 TIMER_SIZE = 30
 TIMER_SECONDS = 60
 READY_SECONDS = 1.4
 
 # 游戏性
-TITLE = "请坚持 " + str(TIMER_SECONDS) + " 秒！"
+TITLE = str(TIMER_SECONDS) + "S by zhangshenjia"
 FPS = 60
 SHIP_SPEED = 200
 MUSIC_VOLUME = 0.3
