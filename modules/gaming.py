@@ -204,9 +204,9 @@ class Game():
     # 显示文本提示
     def showMessage(self, message, color = c.MESSAGE_COLOR, seconds = c.MESSAGE_SECONDS):
 
-        font = pygame.font.Font(c.MESSAGE_FONT,c.MESSAGE_SIZE)
-        text = font.render(message, True, color)
-        position = text.get_rect()
+        font = self.getMessageFont()
+        surface = font.render(message, True, color)
+        position = surface.get_rect()
         position.center = c.SCREEN_CENTER
 
         self.timer = Timer({
@@ -226,8 +226,19 @@ class Game():
             # 更新并绘制画面
             self.timer.update()
             self.screen.fill(c.BLACK)
-            self.screen.blit(text, position)
+            self.screen.blit(surface, position)
             self.clock.tick(c.FPS)
             pygame.display.update()
+
+
+    # 加载字体
+    def getMessageFont(self):
+        if c.FONT_NAME in pygame.font.get_fonts():
+            return pygame.font.SysFont(c.FONT_NAME, c.MESSAGE_SIZE, bold)
+        else:
+            filepath = helpers.abspath('resources', 'fonts', c.FONT_FILE)
+            font = pygame.font.Font(filepath, c.MESSAGE_SIZE)
+            font.set_bold(True)
+            return font
 
 game = Game()

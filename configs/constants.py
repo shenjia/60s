@@ -13,14 +13,16 @@ SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 SCREEN_CENTER = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
+# 字体
+FONT_NAME = "Consolas.ttf"
+FONT_FILE = 'Consolas.ttf'
+
 # 信息提示
-MESSAGE_FONT = "resources/fonts/Consolas Bold.ttf"
 MESSAGE_COLOR = RED
 MESSAGE_SIZE = 50
 MESSAGE_SECONDS = 5
 
 # 计时器
-TIMER_FONT = "resources/fonts/Consolas Bold.ttf"
 TIMER_COLOR = WHITE
 TIMER_SIZE = 30
 TIMER_SECONDS = 60

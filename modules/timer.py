@@ -1,6 +1,7 @@
 import pygame
 import math
 from configs import constants as c
+from modules import helpers
 
 class Timer:
 
@@ -35,12 +36,12 @@ class Timer:
     # 显示倒计时
     def draw(self):
         if not self.isHide:
-            timer = self.getText()
-            font = pygame.font.Font(c.TIMER_FONT,c.TIMER_SIZE)
-            text = font.render(timer, True, c.TIMER_COLOR)
-            position = text.get_rect()
+            text = self.getText()
+            font = self.getFont()
+            surface = font.render(text, True, c.TIMER_COLOR)
+            position = surface.get_rect()
             position.center = ((c.SCREEN_WIDTH/2), c.TIMER_SIZE)
-            pygame.display.get_surface().blit(text, position)
+            pygame.display.get_surface().blit(surface, position)
 
     # 获取显示文案
     def getText(self):
@@ -48,3 +49,13 @@ class Timer:
             return str(math.ceil((self.until - self.now) / 1000))
         else:
             return str(math.ceil(self.now / 1000))
+
+    # 加载字体
+    def getFont(self):
+        if c.FONT_NAME in pygame.font.get_fonts():
+            return pygame.font.SysFont(c.FONT_NAME, c.TIMER_SIZE, bold)
+        else:
+            filepath = helpers.abspath('resources', 'fonts', c.FONT_FILE)
+            font = pygame.font.Font(filepath, c.TIMER_SIZE)
+            font.set_bold(True)
+            return font

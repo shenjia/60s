@@ -113,3 +113,4 @@ dmypy.json
 .pyre/
 resources/.DS_Store
 resources/audios/.DS_Store
+.DS_Store
