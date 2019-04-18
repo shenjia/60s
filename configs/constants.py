@@ -27,7 +27,7 @@ TIMER_SECONDS = 60
 READY_SECONDS = 1.4
 
 # 游戏性
-TITLE = str(TIMER_SECONDS) + "S by zhangshenjia"
+TITLE = str(TIMER_SECONDS) + "s by zhangshenjia"
 FPS = 60
 SHIP_SPEED = 200
 MUSIC_VOLUME = 0.3
