@@ -3,8 +3,10 @@ import pygame
 from configs import constants as c
 from .helpers import *
 
+FONT = {}
 IMAGES = {}
 AUDIOS = {}
+
 
 # 加载图片
 def loadImage(dir, file, name):
